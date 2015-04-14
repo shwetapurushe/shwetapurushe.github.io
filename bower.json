@@ -1,0 +1,22 @@
+{
+  "name": "shwetapurushe.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/shwetapurushe/shwetapurushe.github.io",
+  "authors": [
+    "shwetapurushe <shwetapurushe@gmail.com>"
+  ],
+  "description": "personal website",
+  "main": "index.html",
+  "keywords": [
+    "Angular",
+    "D3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
