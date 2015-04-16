@@ -1,5 +1,6 @@
 /**
  * Created by Shweta Purushe on 4/15/2015.
+ * Starting with understanding d3 paths and path generators
  */
 var colors = {
     'pink': '#FF00FF',
@@ -17,8 +18,8 @@ filter.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation',
 
 //path generator
 var arc = d3.svg.arc()
-    .startAngle(Math.PI/2).endAngle(2*Math.PI)
-    .innerRadius(100).outerRadius(90);
+    .innerRadius(100).outerRadius(95)
+    .startAngle(0).endAngle(0);
 
 var engineArc = d3.svg.arc()
                 .startAngle(0).endAngle(Math.PI * 2)
@@ -36,4 +37,29 @@ var fuzzyArc = containerG.append("path")
 var boldArc = containerG.append("path").attr("d", arc).attr("fill", colors.pink);
 //text
 var label = containerG.append("text").attr("fill", colors.pink).attr("text-anchor", "middle").attr("dy", "0.35em");
-label.text("Shweta");
+//label.text("Shweta");
+
+var startP = 0;
+var endP = 0.90;
+var count = Math.abs((endP - startP)/0.01);
+var step = endP > startP ? 0.01:-0.01;
+var progress = startP;
+var correctP = d3.format('0%');
+
+function makeProgress (){
+    label.text(correctP(progress));
+    fuzzyArc.attr("d", arc.endAngle(Math.PI * 2 * progress));
+    boldArc.attr("d", arc.endAngle(Math.PI *2 * progress));
+}
+
+(function animateProgress(){
+
+    makeProgress();
+    if(count > 0){
+        count--;
+        progress += step;
+        setTimeout(animateProgress, 30)
+
+    }
+
+})();
