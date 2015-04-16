@@ -13,27 +13,27 @@ var svg = d3.select('#radialProgress').append('svg').attr('width', 500).attr('he
 var defs = svg.append('defs').attr('id', 'def');
 //filter
 var filter = defs.append('filter').attr('id', 'blurFilter');
-filter.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '7');
+filter.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '7');//the more the stdDev, the more the scatter;
 
-
+//path generator
 var arc = d3.svg.arc()
-    .startAngle(Math.PI/2)
-    .endAngle(2*Math.PI)
-    .innerRadius(100)
-    .outerRadius(85);
+    .startAngle(Math.PI/2).endAngle(2*Math.PI)
+    .innerRadius(100).outerRadius(90);
 
-svg.append("path")
-    .attr("d", arc)
-    .attr("transform", "translate(200,200)")
-    .style('fill', colors.pink)
-    .attr('filter','url(#blurFilter)');//applying filter on arc;
+var engineArc = d3.svg.arc()
+                .startAngle(0).endAngle(Math.PI * 2)
+                .innerRadius(100).outerRadius(95);
 
 
-//using filters on rect
-/*var rect =      svg.append('rect')
-                .attr('width', 200)
-                .attr('height', 200).attr('fill', 'yellow')
-                .attr('stroke','green')
-                .attr('stroke','green')
-                .attr('stroke-width', 3)
-                .attr('filter','url(#blurFilter)');*/
+var containerG = svg.append('g').attr("transform", "translate(200,200)");
+var backGArc = containerG.append("path").attr("d", engineArc)
+               .style("fill", "black").attr("fill-opacity", 0.5);
+//draws the actual arc
+var fuzzyArc = containerG.append("path")
+                .attr("d", arc)
+                .style('fill', colors.pink)
+                .attr('filter','url(#blurFilter)');/*applying filter on arc;*/
+var boldArc = containerG.append("path").attr("d", arc).attr("fill", colors.pink);
+//text
+var label = containerG.append("text").attr("fill", colors.pink).attr("text-anchor", "middle").attr("dy", "0.35em");
+label.text("Shweta");
