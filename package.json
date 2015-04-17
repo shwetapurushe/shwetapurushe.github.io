@@ -1,0 +1,28 @@
+{
+  "name": "shwetapurushe.github.io",
+  "version": "0.0.1",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shwetapurushe/shwetapurushe.github.io.git"
+  },
+  "keywords": [
+    "Angular",
+    "D3",
+    "JavaScript"
+  ],
+  "author": "Shweta Purushe",
+  "license": "MPL",
+  "bugs": {
+    "url": "https://github.com/shwetapurushe/shwetapurushe.github.io/issues"
+  },
+  "homepage": "https://github.com/shwetapurushe/shwetapurushe.github.io",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2"
+  }
+}
