@@ -4,5 +4,5 @@
 var myapp = angular.module('app', []);
 
 myapp.controller("appController", function(){
-    this.title = "Shweta";
+    this.progress = "Website under construction";
 } );
