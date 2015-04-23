@@ -9,7 +9,6 @@ var colors = {
 };
 
 var svg = d3.select('#radialProgress').append('svg').attr('width', 500).attr('height', 500);
-
 //defs
 var defs = svg.append('defs').attr('id', 'def');
 //filter
@@ -63,3 +62,5 @@ function makeProgress (){
     }
 
 })();
+
+//checking from mac
