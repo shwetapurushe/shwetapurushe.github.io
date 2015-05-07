@@ -9,7 +9,7 @@ var pythonCircle= { "x": 100, "y": 100, "radius": 20, "color" : "#3399FF", endX 
 
 var compEngines = [rCircle, stataCircle, pythonCircle];
 
-var svg = d3.select('#blah')
+var svg = d3.select('#showCase')
     .append('svg')
     .attr('width', 500)
     .attr('height', 500)
