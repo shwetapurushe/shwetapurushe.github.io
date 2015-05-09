@@ -8,8 +8,8 @@ myapp.config(function($stateProvider, $urlRouterProvider){
 });
 
 
-myapp.controller("appController", function($state){
-    this.state = $state;
+myapp.controller("appController", function(){
+    //this.state = $state;
     this.progress = "Website under construction!!"
 } );
 
