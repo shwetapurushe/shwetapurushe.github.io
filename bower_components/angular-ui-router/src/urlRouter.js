@@ -407,7 +407,6 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
         if (url !== null && params && params['#']) {
           url += '#' + params['#'];
         }
-
         url = appendBasePath(url, isHtml5, options.absolute);
 
         if (!options.absolute || !url) {

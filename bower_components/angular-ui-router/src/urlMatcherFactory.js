@@ -235,8 +235,8 @@ UrlMatcher.prototype.exec = function (path, searchParams) {
   searchParams = searchParams || {};
 
   var paramNames = this.parameters(), nTotal = paramNames.length,
-    nPath = this.segments.length - 1,
-    values = {}, i, j, cfg, paramName;
+      nPath = this.segments.length - 1,
+      values = {}, i, j, cfg, paramName;
 
   if (nPath !== m.length - 1) throw new Error("Unbalanced capture group in route '" + this.source + "'");
 
@@ -905,7 +905,7 @@ function $UrlMatcherFactory() {
     function unwrapShorthand(config) {
       var keys = isObject(config) ? objectKeys(config) : [];
       var isShorthand = indexOf(keys, "value") === -1 && indexOf(keys, "type") === -1 &&
-                        indexOf(keys, "squash") === -1 && indexOf(keys, "array") === -1;
+          indexOf(keys, "squash") === -1 && indexOf(keys, "array") === -1;
       if (isShorthand) config = { value: config };
       config.$$fn = isInjectable(config.value) ? config.value : function () { return config.value; };
       return config;
@@ -1000,12 +1000,12 @@ function $UrlMatcherFactory() {
     },
     $$keys: function () {
       var keys = [], chain = [], parent = this,
-        ignore = objectKeys(ParamSet.prototype);
+          ignore = objectKeys(ParamSet.prototype);
       while (parent) { chain.push(parent); parent = parent.$$parent; }
       chain.reverse();
       forEach(chain, function(paramset) {
         forEach(objectKeys(paramset), function(key) {
-            if (indexOf(keys, key) === -1 && indexOf(ignore, key) === -1) keys.push(key);
+          if (indexOf(keys, key) === -1 && indexOf(ignore, key) === -1) keys.push(key);
         });
       });
       return keys;

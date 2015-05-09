@@ -1,6 +1,10 @@
 The MIT License
 
+<<<<<<< HEAD
 Copyright (c) 2013-2015 The AngularUI Team, Karsten Sperling
+=======
+Copyright (c) 2014 The AngularUI Team, Karsten Sperling
+>>>>>>> 80330ff93c445233d0045b97ca54626d68737329
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

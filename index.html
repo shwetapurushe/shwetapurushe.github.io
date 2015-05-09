@@ -16,8 +16,11 @@
     <li ng-class="{active: state.current.data.activetab == 'skills'}" ><a ui-sref="skills">Skills</a></li>
 </ul>
 
-    <div id = "wholePage" style = "width: 100%; height: 100%;">
 
+<body ng-controller="appController as main" >
+    {{main.progress}}
+
+    <div id = "wholePage" style = "width: 100%; height: 100%;">
         <!-Eventually this should be translated to the middle of the page -->
         <div id= "showCase" style = "width: 500px; height: 500px; border: dashed">
         </div>
