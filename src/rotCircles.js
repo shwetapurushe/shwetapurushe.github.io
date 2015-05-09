@@ -15,7 +15,7 @@ var h = 500;
 var r6 = 410;
 
 
-var size = 5;
+var size = 2;
 var running;
 
 var click = function()
@@ -37,7 +37,7 @@ svg = d3.select("#showCase")
 
 chart = svg.append("svg:g")
     .attr("class", "base_group")
-    //.attr("transform", "translate(" + [w/2,h/2] + ")scale(0.25, 0.25)");
+    .attr("transform", "translate(" + [w/2,h/2] + ")scale(0.5, 0.5)");
 
 //draws the circle
 var make_circle = function(r,n,offset)
@@ -60,14 +60,14 @@ var make_circle = function(r,n,offset)
 var circle_factory = function(name, data, offset, step)
 {
 
-    var boxes = chart.selectAll("g." + name)
+    var tinyCircles = chart.selectAll("g." + name)
         .data(data, function(d) { return d.index });
 
-    boxes.enter().append("svg:g")
+    tinyCircles.enter().append("svg:g")
         .attr("class", name)
         .append("svg:circle");
 
-    boxes.selectAll("circle")
+    tinyCircles.selectAll("circle")
         .data(data, function(d) { return d.index })
         .attr("cx", function(d,i) { return d.cx})
         .attr("cy", function(d,i) { return d.cy})
