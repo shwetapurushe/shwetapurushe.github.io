@@ -5,6 +5,27 @@ var myapp = angular.module('app', ['ui.router']);
 
 myapp.config(function($stateProvider, $urlRouterProvider){
 
+
+    $stateProvider
+        .state('skills', {
+            url : '/skills',
+            templateUrl : "src/skills/skillPartial.tpl.html",
+            data : {
+                activetab: 'skills'
+            }
+        })
+        .state('about', {
+            url : '/about',
+            templateUrl: "src/about/aboutPartial.tpl.html",
+            data : {
+                activetab: 'about'
+            }
+        })
+        .state('publications', {
+            url : '/publications',
+            templateUrl : 'src/publications/pubPartial.tpl.html',
+            data : {activetab : 'publications'}
+        });
 });
 
 
