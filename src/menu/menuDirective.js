@@ -23,6 +23,10 @@ myapp.directive('fancyMenu', function(){
 
             link : function(scope, elem, attrs){
 
+                /*
+                 * fancy menu code
+                 *
+                 * */
 
                 var w = 500;
                 var h = 500;
@@ -33,92 +37,76 @@ myapp.directive('fancyMenu', function(){
 
                 var menuCircles = [aboutC, publicationsC, skillsC];
 
-
-                //var elem = svg.selectAll("g")
-                //    .data(json.nodes)
-                //
-                ///*Create and place the "blocks" containing the circle and the text */
-                //var elemEnter = elem.enter()
-                //    .append("g")
-                //    .attr("transform", function(d){return "translate("+d.x+",80)"})
-                //
-                ///*Create the circle for each block */
-                //var circle = elemEnter.append("circle")
-                //    .attr("r", function(d){return d.r} )
-                //    .attr("stroke","black")
-                //    .attr("fill", "white")
-                //
-                ///* Create the text for each block */
-                //elemEnter.append("text")
-                //    .attr("dx", function(d){return -20})
-                //    .text(function(d){return d.label});
-
-                var menuItems = d3.select('#mainC').selectAll('g')
-                    .data(menuCircles);
-
-                var menuItem = menuItems
-                            .enter()
-                            .append("g")
-                            .append('circle')
-                            .attr("r", function(d){return d.r} )
-                            .attr("", function(d){return d.r} )
+                d3.select('#mainC').selectAll('g')
+                    .data(menuCircles)
+                    .enter()
+                    .append('g')
+                    .attr('id', "blahs")
+                    .each(function(d){
+                        d3.select(this).append('circle')
+                            .attr('id', 'myCircles')
+                            .attr('cx', function(d){return d.x;})
+                            .attr('cy', function(d){return d.y;})
+                            .attr('r', function(d){return d.radius;})
+                             .style('visibility', 'hidden')
+                             .attr('fill', function(d){return d.color;})
                             .on('mouseover', function(d){
-                            d3.select(this).transition()
-                                .attr('r', 100);
+                                d3.select(this).transition()
+                                    .attr('r', 100);
                             })
                             .on('mouseout', function(d){
-                            d3.select(this).transition()
-                                .duration(1000)
-                                .attr('r', function(d){return d.radius; });
-                                })
-                                .on('click', function(d){
-                                    scope.changeView(d.path);
-                                });;
+                                d3.select(this).transition()
+                                    .duration(1000)
+                                    .attr('r', function(d){return d.radius; });
+                            })
+                            .on('click', function(d){
+                                scope.changeView(d.path);
+                            })
+                           d3.select(this).append("text")
+                            .text(function(d){return d.text}).style('visibility','hidden' )
+                            .attr('id', "texts")
+                            .attr("x", function(d){return d.X ;})
+                            .attr("y", function(d){return d.Y ;})
+                            .attr('font-color', "#FF6600")
+                            .attr("font-size", '30px');
 
-                //var menuItem = d3.select('#mainC').selectAll('circles')
-                //    .data(menuCircles)
-                //    .enter()
-                //    .append('g')
-                //    .append('circle')
-                //    .on('mouseover', function(d){
-                //        d3.select(this).transition()
-                //            .attr('r', 100);
-                //    })
-                //    .on('mouseout', function(d){
-                //        d3.select(this).transition()
-                //            .duration(1000)
-                //            .attr('r', function(d){return d.radius; });
-                //    })
-                //    .on('click', function(d){
-                //        scope.changeView(d.path);
-                //    });
-                //
 
-                var menuCircleAttr = menuItem
-                    .attr('cx', function(d){return d.x;})
-                    .attr('cy', function(d){return d.y;})
-                    .attr('r', function(d){return d.radius;})
-                    .style('visibility', 'hidden')
-                    .attr('fill', function(d){return d.color;});
+                    });
 
                d3.select('#orangeSun')
                     .on('click', function(){
 
-                        menuItem.transition()
+                       console.log(d3.selectAll('#texts'));
+                       d3.selectAll('#myCircles').transition()
                             .attr('cx', function(d){return d.endX;})
                             .attr('cy', function(d){return d.endY;})
                             .style('visibility', 'visible')
                             .ease('elastic')
                             .duration(1000);
 
+                       d3.selectAll('#texts').transition()
+                       .text(function(d){return d.text})
+                           .attr("x", function(d){return d.endX ;})
+                           .attr("y", function(d){return d.endY ;})
+                           .style('visibility','visible' )
+                           .ease('elastic')
+                           .duration(1000);;
 
                     });
-//
-//var r1 = 90;
-//var r2 = 150;
-//var r3 = 220;
-//var r4 = 280;
-//var r5 = 340;
+
+
+                /*
+                * Rotating border code
+                *
+                * */
+
+
+                //
+                //var r1 = 90;
+                //var r2 = 150;
+                //var r3 = 220;
+                //var r4 = 280;
+                //var r5 = 340;
                 var r6 = 410;
 
 
@@ -167,10 +155,10 @@ myapp.directive('fancyMenu', function(){
 
                     tinyCircles.selectAll("circle")
                         .data(data, function(d) { return d.index })
-                        .attr("cx", function(d,i) { return d.cx})
-                        .attr("cy", function(d,i) { return d.cy})
+                        .attr("cx", function(d) { return d.cx})
+                        .attr("cy", function(d) { return d.cy})
                         .attr("r", function(d) {return d.r})
-                        .attr("stroke", function(d,i){
+                        .attr("stroke", function(d){
                             if(d.index % 2 == 1) {
                                 return "#33CCCC"
                             }
@@ -200,7 +188,7 @@ myapp.directive('fancyMenu', function(){
                 update_circles();
 
             }
-        }
+        };
     return directiveDefObject;
 
 });
