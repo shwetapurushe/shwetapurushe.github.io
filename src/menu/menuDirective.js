@@ -109,7 +109,12 @@ myapp.directive('fancyMenu', function(){
                            .data(menuCircles)
                            .enter();
 
-                    });
+                       d3.selectAll('#myCircles')
+                           .data(menuCircles)
+                           .enter();
+
+
+                   });
 
 
                 /*
