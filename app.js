@@ -1,9 +1,9 @@
 /**
  * Created by Shweta on 4/16/2015.
  */
-var myapp = angular.module('app', ['ui.router']);
+angular.module('app', ['ui.router', 'ui.bootstrap', 'app.about']);
 
-myapp.config(function($stateProvider, $urlRouterProvider){
+angular.module('app').config(function($stateProvider, $urlRouterProvider){
 
 
     $stateProvider
@@ -17,6 +17,8 @@ myapp.config(function($stateProvider, $urlRouterProvider){
         .state('about', {
             url : '/about',
             templateUrl: "src/about/aboutPartial.tpl.html",
+            controller : 'aboutPageController',
+            controllerAs : 'aCtrl',
             data : {
                 activetab: 'about'
             }
@@ -29,7 +31,7 @@ myapp.config(function($stateProvider, $urlRouterProvider){
 });
 
 
-myapp.controller("appController", function(){
+angular.module('app').controller("appController", function(){
     //this.state = $state;
     this.progress = "Website under construction!!"
 } );
