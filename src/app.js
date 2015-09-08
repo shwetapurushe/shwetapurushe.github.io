@@ -38,7 +38,7 @@ myapp.config(function($stateProvider, $urlRouterProvider){
 
 myapp.controller("appController", ['$scope', '$location', function($scope, $location){
     //this.state = $state;
-    this.progress = "Website under construction!!"
+    this.progress = ""
     $scope.$on('loadPage', function(event , path){
         $location.path(path);
         $scope.$apply();
