@@ -5,14 +5,18 @@ body{
 
 fancy-menu
 {
-    width: 500px;
-    height: 500px;
+    width: 35%;
+    height: 100%;
     float: left;
 }
 
 #pageContainer {
-    width: 600px;
-    height:600px;
+    width: 60%;
+    height:100%;
     float: left;
     /*background-color: red;*/
+}
+
+.projList{
+    font-size: 18px
 }

@@ -21,6 +21,13 @@ myapp.config(function($stateProvider, $urlRouterProvider){
                 activetab: 'about'
             }
         })
+        .state('projects',{
+            url : '/projects',
+            templateUrl : "src/projects/projectsPartial.html",
+            data : {
+                activetab : 'projects'
+            }
+        })
         .state('publications', {
             url : '/publications',
             templateUrl : 'src/publications/pubPartial.tpl.html',

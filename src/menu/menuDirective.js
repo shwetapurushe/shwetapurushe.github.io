@@ -30,9 +30,10 @@ myapp.directive('fancyMenu', function(){
 
                 var aboutC = { "x": 0, "y": 0, "r": 80, "color" : "#33CCCC", path : '/about', text : "About"};
                 var publicationsC = { "x": 0, "y": 0, "r": 80, "color" : "#33CCCC", path : '/publications', text:"Publications"};
+                var projectsC = { "x": 0, "y": 0, "r": 80, "color" : "#33CCCC", path : '/projects', text:"Projects"};
                 var skillsC= { "x": 0, "y": 0, "r": 80, "color" : "#33CCCC", path : '/skills', text: "Skills"};
 
-                var menuCircles = [aboutC, publicationsC, skillsC];
+                var menuCircles = [aboutC, projectsC, skillsC];
 
                 d3.select('#mainC').selectAll('g')
                     .data(menuCircles)
