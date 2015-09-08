@@ -33,5 +33,6 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
 
 angular.module('app').controller("appController", function(){
     //this.state = $state;
+    var main = this;
     this.progress = "Website under construction!!"
 } );
