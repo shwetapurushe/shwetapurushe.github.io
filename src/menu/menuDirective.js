@@ -130,7 +130,7 @@ myapp.directive('fancyMenu', function(){
                 //var r3 = 220;
                 //var r4 = 280;
                 //var r5 = 340;
-                var r6 = 410;
+                var r6 = 340;
 
 
                 //var size = 1;
