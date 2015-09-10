@@ -41,6 +41,13 @@ fancy-menu
     padding: 7px 7px 7px 7px;
 }
 
+.edu_column{
+    padding: 0 25px 25px 25px;
+}
+.skill_column{
+    padding: 0 15px 15px 15px;
+}
+
 footer {
     padding-top: 10px;
     position : fixed;
