@@ -1,13 +1,26 @@
-body{
-    /*background-color: #333;*/
-    color: #FF6600;
-}
 
 fancy-menu
 {
     width: 35%;
     height: 100%;
     float: left;
+}
+
+#menuContainer{
+    width: 500px;
+    height:500px;
+}
+
+.menuFonts{
+    font-size: 15px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.menuOrbits{
+    stroke : #AAA4A8;
+    fill: none;
+    stroke-width : 1;
 }
 
 #pageContainer {
