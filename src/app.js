@@ -1,7 +1,7 @@
 /**
  * Created by Shweta on 4/16/2015.
  */
-var myapp = angular.module('app', [ 'app.about', 'ui.router', 'ngAnimate', 'ui.bootstrap']);
+var myapp = angular.module('app', [ 'app.about','ui.bootstrap','app.collapsible', 'ui.router', 'ngAnimate']);
 
 myapp.config(function($stateProvider, $urlRouterProvider){
 
