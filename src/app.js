@@ -1,7 +1,7 @@
 /**
  * Created by Shweta on 4/16/2015.
  */
-var myapp = angular.module('app', ['ui.router']);
+var myapp = angular.module('app', [ 'app.about', 'ui.router', 'ngAnimate', 'ui.bootstrap']);
 
 myapp.config(function($stateProvider, $urlRouterProvider){
 
@@ -17,6 +17,8 @@ myapp.config(function($stateProvider, $urlRouterProvider){
         .state('about', {
             url : '/about',
             templateUrl: "src/about/aboutPartial.tpl.html",
+            controller: 'aboutPageController',
+            controllerAs: 'aCtrl',
             data : {
                 activetab: 'about'
             }
