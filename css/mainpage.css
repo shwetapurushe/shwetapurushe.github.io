@@ -57,6 +57,11 @@ fancy-menu
     height: 500px;
     width: 100%;
 }
+
+.project_partial{
+    padding-left: 25px;
+}
+
 footer {
     padding-top: 10px;
     position : fixed;

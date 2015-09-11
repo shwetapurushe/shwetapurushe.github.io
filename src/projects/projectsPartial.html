@@ -1,109 +1,11 @@
-<br>
-<h2>Projects</h2>
-<h3>1. The Weave Analyst </h3>
+<div>
+    <br>
+    <h2>Projects</h2>
+    <br>
 
-<h4>An open source, analytic and visualization peer to Weave (Web- based Analytic and Visualization Environment)</h4>
-
-The goal of the Weave Analyst is
-<ol>
-    <li>This peer enhances the analytic support in Weave through computations in external statistical engines.</li>
-    <li>To provide a framework for providing interactive visualizations in Weave to R users via a simple R package</li>
-</ol>
-
-<h4>Design and implementation include the following:</h4>
-<ul>
-    <li>Development of a JavaScript web application using the Angular (https://angularjs.org/) framework</li>
-    <li>Deployment, installation, build system and code repository maintenance for the above application</li>
-    <li>Development of an API for server-side communication with external computational engines for example R, STATA, Python</li>
-    <li>Development of support for multiple data sources</li>
-    <li>Integration with Weave through the provided Weave JavaScript API</li>
-    <li>Evaluation of data architecture and performance evaluation for computations in R</li>
-    <li>Light-weight report visualizations in D3</li>
-    <li>Development and preliminary implementation of metadata standards for data and computations</li>
-    <li>Preliminary implementation of analytic pipeline construction, its execution and provenance management</li>
-</ul>
-
-<br>
-
-<p><a href= "http://info.oicweave.org/projects/weave/wiki/Weave_Analyst" target="_blank">  Documentation, instructional videos and additional material</a>
-
-<p><a href="http://demo.iweave.com/weave-stable/aws" target="_blank">Demo</a></p>
-
-<a href="https://github.com/WeaveTeam/WeaveAnalyst" class="btn btn-info brn-sm"><span style = "font-size : 25px" class="fa fa-github"></span> Weave Analyst </a>
-
-
-
-
-
-<h3>2. WEb-based Analytic and Visualization Environment (Weave)</h3>
-
-<ol>
-    <li>
-        <h4>Development of analytic tools in Weave</h4>
-        <ul>
-            <li>Development of an ‘R Script Editor’ for running R computations and visualizing results in Weave.</li>
-            <li>Ability to view and store intermediate R computational results in Weave</li>
-            <li>Support generation of R plots in Weave</li>
-        </ul>
-    </li>
-
-    <li>
-        <h4>Development of analytic support for visualizations in Weave</h4>
-        <ul>
-            <li>Utilizing R computations to enable data analysis in Radviz, for example layout of dimension anchors according to the Class Discrimination Algorithm</li>
-            <li> Using R computations for missing data imputation using different algorithms</li>
-        </ul>
-
-    </li>
-</ol>
-<br>
-<p><a href= "http://info.oicweave.org/projects/weave/wiki" target="_blank">  Documentation and additional material</a>
-
-<p><a href="http://www.iweave.com/" target="_blank">Demos</a></p>
-<a href="https://github.com/WeaveTeam/Weave" class="btn btn-info"><span style = "font-size : 25px" class="fa fa-github"></span> Weave</a>
-
-
-
-
-<h3>3. Application for CDC/ASTHO/SKC/RI</h3>
-
-<h4>An Open source visual analytic platform for epidemiological data analysis.</h4>
-
-<p>The development of the Weave Analyst was guided through the ‘Agile’ process of development by the Department of Public Health, Seattle King County (SKC),
-     Centers of Disease Control and Prevention (Atlanta) and the Rhode Island Data Hub.</p>
-
-Design and Implementation overlap with the Weave Analyst with the following additional goals
-
-<ul>
-    <li>Categorical and time data filters</li>
-    <li>D3 geographical filters</li>
-    <li>Additional support for epidemiological routines, for example prevention of record identification, remapping data etc.</li>
-</ul>
-
-
-<h3>4. Google Summer of Code (GSOC) 2013</h3>
-<h4>‘Design and implementation of computational support for large datasets in Weave using the R project’</h4>
-
-This project included design and implementation of the following
-<ul>
-    <li>Exploration of different data architecture pipelines for robust data analysis</li>
-    <li>Investigation of packages for parallelism in R and preliminary implementation</li>
-    <li>Implementation of a storage and retrieval system for computational results</li>
-</ul>
-
-<h3>5. Google Summer of Code (GSOC) 2014 </h3>
-<h4>Development of an analytic framework for multivariate ’omics’ datasets in the Analyst’s Workstation using BioConductor</h4>
-
-This project included design and implementation of the following
-<ul>
-    <li>Development of API for analytic support in Weave using computations in BioConductor and Python</li>
-    <li>Server side computational model for analyzing large ‘omics’ datasets</li>
-    <li>Experimentation with running several clustering algorithms in BioConductor with features developed in GSOC 2013 project</li>
-</ul>
-
-<h3>6. Data Crumbs</h3>
-<p>This project is an alternative JS GUI to the Attribute selector in Weave.
-It allows navigation down a hierarchy, for the selection of data columns.</p>
-
-<a href="https://github.com/shwetapurushe/dataCrumbs" class="btn btn-info"><span style = "font-size : 25px" class="fa fa-github"></span> Data Crumbs</a>
-<h3>7. ADA</h3>
+    <collapse-Panel heading = "1. The Weave Analyst" urlstring = 'src/projects/weave_analyst_partial.html'></collapse-Panel><br>
+    <collapse-Panel heading = "2. WEb-based Analytic and Visualization Environment (Weave)" urlstring = 'src/projects/weave_partial.html'></collapse-Panel><br>
+    <collapse-Panel heading = "3. Application for CDC/ASTHO/SKC/RI" urlstring = 'src/projects/epidemiology_partial.html'></collapse-Panel><br>
+    <collapse-Panel heading = "4. Google Summer of Code (GSOC)" urlstring = 'src/projects/gsoc_partial.html'></collapse-Panel><br>
+    <collapse-Panel heading = "5. Miscellaneous" urlstring = 'src/projects/misc_partial.html'></collapse-Panel><br>
+</div>
