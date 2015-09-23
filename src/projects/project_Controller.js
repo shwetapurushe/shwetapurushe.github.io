@@ -4,30 +4,31 @@
  */
 (function (){
     angular.module('app.project', []);
-    angular.module('app.about').controller('aboutPageController' , aboutPageController )
+    angular.module('app.project').controller('carouselController' , carouselController )
 
-    function aboutPageController (){
-        var aCtrl = this;
+    function carouselController (){
+        var pCtrl = this;
+        pCtrl.blah = 'Shweta!!';
 
-        aCtrl.interval = 5000;
-        aCtrl.noWrapSlides = false;
-        aCtrl.imagePath = "css/images/";
-        aCtrl.slides = [
+        pCtrl.interval = 5000;
+        pCtrl.noWrapSlides = false;
+        pCtrl.imagePath = "css/images/";
+        pCtrl.slides = [
             {
                 text : 'Data Analysis and Visualization',
-                image :  aCtrl.imagePath+'Analyst.png'
+                image :  pCtrl.imagePath+'Analyst.png'
             },
             {
                 text: 'Metadata',
-                image :  aCtrl.imagePath+'Metadata.png'
+                image :  pCtrl.imagePath+'Metadata.png'
             },
             {
                 text: 'Projects',
-                image :  aCtrl.imagePath+'wa_Projects.jpg'
+                image :  pCtrl.imagePath+'wa_Projects.png'
             },
             {
                 text: 'Projects List',
-                image :  aCtrl.imagePath+'WA_projects_listview.jpg'
+                image :  pCtrl.imagePath+'WA_projects_listview.png'
             }
         ];
 
