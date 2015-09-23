@@ -3,7 +3,7 @@
  * controlls the About partial
  */
 (function (){
-    angular.module('app.about', []);
+    angular.module('app.project', []);
     angular.module('app.about').controller('aboutPageController' , aboutPageController )
 
     function aboutPageController (){
