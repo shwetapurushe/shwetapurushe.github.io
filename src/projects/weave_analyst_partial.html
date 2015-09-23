@@ -26,5 +26,20 @@
 
     <p><a href="http://demo.iweave.com/weave-stable/aws" target="_blank">Demo</a></p>
 
+    <div  ng-controller="carouselController as pCtrl" style = "width: 800px; height: 570px;">
+        <carousel style="width: 100%; height: 100%" interval = "pCtrl.interval" no-wrap="pCtrl.noWrapSlides">
+            <slide ng-repeat= "s in pCtrl.slides" active = "s.active">
+                <img ng-src="{{s.image}}" style = "margin:auto;">
+
+                <div style="padding-top: 10px">
+                    <h4 style ="color:black">{{s.text}}</h4>
+
+                </div>
+
+            </slide>
+
+        </carousel>
+    </div>
+    <br>
     <a href="https://github.com/WeaveTeam/WeaveAnalyst" class="btn btn-info brn-sm"><span style = "font-size : 25px" class="fa fa-github"></span> Weave Analyst </a>
 </div>
