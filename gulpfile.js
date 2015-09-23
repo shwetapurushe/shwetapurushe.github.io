@@ -9,7 +9,7 @@ var concat = require('gulp-concat');
 
 //defining a task now
 gulp.task('concatScripts', function(){
-   return gulp.src('src/*.js')
+   return gulp.src('src/**/*.js')
        .pipe(concat('main.js'))
        .pipe(gulp.dest('js'))
 });
