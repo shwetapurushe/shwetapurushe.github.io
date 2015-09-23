@@ -22,7 +22,7 @@ myapp.directive('fancyMenu', function(){
 
                 var aboutC = {"r": 20 , "R": 180, color : '#00CCFF' , speed: 3, phi0: 400, path : '/about', text : "About Me"};
                 var projectsC = {"r": 20 ,"R": 60, color: '#FF7C66',  speed: 3, phi0: 200, path : '/projects', text:"Projects"};
-                var skillsC= {"r": 20 , "R": 120,color: '#705891', speed: 3,phi0: 600, path : '/skills', text: "Skills"};
+                var skillsC= {"r": 20 , "R": 120,color: '#705891', speed: 3,phi0: 100, path : '/skills', text: "Skills"};
                 var menuCircles = [aboutC, projectsC, skillsC];
 
                 var home = {"r": 10, "color" : "#0e0706;", path : '/index', text : "h", image : 'om.jpg'};
