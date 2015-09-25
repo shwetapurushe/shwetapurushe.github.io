@@ -40,6 +40,10 @@ fancy-menu
     border-radius: 30px;
     padding: 7px 7px 7px 7px;
 }
+
+a:hover{
+    background-color: #90fffd;
+}
 .skill_column{
     padding: 0 15px 15px 15px;
 }
