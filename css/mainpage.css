@@ -70,6 +70,13 @@ a:hover{
 .project_partial{
     padding-left: 25px;
 }
+.abt_partial{
+    padding-left:15px;
+}
+.ref_partial{
+    display: inline-block;
+    padding-right: 50px;
+}
 
 footer {
     padding-top: 10px;
