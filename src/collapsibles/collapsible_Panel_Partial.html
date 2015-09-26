@@ -1,5 +1,7 @@
-<div class = "collapseHeader">{{coCtrl.heading}}
-    <span class = "fa fa-caret-down" ng-click="coCtrl.collapseContent()"></span>
+<div class = "collapseHeader" ng-class = "{onHover : hover}" ng-mouseenter="hover=true" ng-mouseleave="hover=false"
+     ng-click="coCtrl.collapseContent()">
+    {{coCtrl.heading}}
+    <span class = "fa fa-caret-down"></span>
 </div>
 <div class = "collapseBody" collapse="coCtrl.isCollapsed" ng-include = 'coCtrl.urlstring'>
 </div>

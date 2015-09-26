@@ -56,6 +56,11 @@ a:hover{
     /*border: 1px solid #AAA4A8;*/
     /*border-radius: 10px;*/
 }
+
+.onHover{
+    color: darkorange;
+    cursor: pointer;
+}
 .collapseBody{
     border:#AAA4A8;
     height: 500px;
