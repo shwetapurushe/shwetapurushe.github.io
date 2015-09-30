@@ -71,11 +71,20 @@ a:hover{
     padding-left: 25px;
 }
 .abt_partial{
-    padding-left:15px;
+    padding-left:5px;
 }
 .ref_partial{
     display: inline-block;
     padding-right: 50px;
+    padding-left: 15px;
+}
+
+.publication{
+    font-size: 14px;
+    font-weight: bold;
+}
+div.abt_partial ol li {
+    padding-top : 10px;
 }
 
 footer {
