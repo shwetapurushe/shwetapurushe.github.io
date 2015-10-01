@@ -10,7 +10,7 @@
         var pCtrl = this;
         pCtrl.blah = 'Shweta!!';
 
-        pCtrl.interval = 5000;
+        pCtrl.interval = 3000;
         pCtrl.noWrapSlides = false;
         pCtrl.imagePath = "css/images/";
         pCtrl.slides = [
