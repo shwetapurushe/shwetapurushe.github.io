@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Summary {{inheritedgene}}</h3>
+	</div>
+	<div class="panel-body">
+		<div ng-if="type == 'mutation'">
+			MUTATIONS
+			<ul>
+				<li>{{inheritedgene}} has
+					{{mutationmetrics.validMutations.length? mutationmetrics.validMutations.length + 'mutated genes': null}}
+				</li>
+				<li> It is mutated in
+					{{(mutationmetrics.validMutations.length/mutationmetrics.allGenes.length)*100 |number:0}}% of all cases.
+				</li>
+			</ul>
+		</div>
+
+
+		<div ng-if="type == 'ccn'">
+			COPY NUMBER ALTERATIONS
+			<ul>
+				<li>Single Copy of Gene Deleted {{(copynumberdata.deletedSingleCopy.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>Single Copy of Gene Observed {{(copynumberdata.gainedSingleCopy.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>Both Copies of Gene Deleted {{(copynumberdata.deletedBothCopies.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>Both Copies of Gene Observed {{(copynumberdata.gainedBothCopies.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>No Change {{(copynumberdata.noChange.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+			</ul>
+		</div>
+
+		<div ng-if="type == 'both'">
+			MUTATIONS
+			<ul>
+				<li>{{inheritedgene}} has
+					{{mutationmetrics.validMutations.length? mutationmetrics.validMutations.length + 'mutated genes': null}}
+				</li>
+				<li> It is mutated in
+					{{(mutationmetrics.validMutations.length/mutationmetrics.allGenes.length)*100 |number:0}}% of all cases.
+				</li>
+			</ul>
+			COPY NUMBER ALTERATIONS
+			<ul>
+				<li>Single Copy of Gene Deleted {{(copynumberdata.deletedSingleCopy.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>Single Copy of Gene Observed {{(copynumberdata.gainedSingleCopy.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>Both Copies of Gene Deleted {{(copynumberdata.deletedBothCopies.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>Both Copies of Gene Observed {{(copynumberdata.gainedBothCopies.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+				<li>No Change {{(copynumberdata.noChange.length/mutationmetrics.allGenes.length)*100 |number:0}}%</li>
+			</ul>
+		</div>
+	</div>
+</div>
